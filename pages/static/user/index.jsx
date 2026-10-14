@@ -37,7 +37,7 @@ const UsersPage = ({ data }) => {
           />
         </div>
 
-        {/* Empty search result */}
+        
         {filteredUsers.length === 0 && (
           <div className="mt-8 rounded-2xl border border-dashed border-slate-300 bg-white px-6 py-16 text-center">
             <p className="text-base font-medium text-slate-900">
@@ -49,7 +49,7 @@ const UsersPage = ({ data }) => {
           </div>
         )}
 
-        {/* User cards */}
+       
         {filteredUsers.length > 0 && (
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {filteredUsers.map((user) => (

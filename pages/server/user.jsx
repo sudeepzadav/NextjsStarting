@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import style from '../../styles/User.module.css'
 
 const UserPage = ({ data }) => {
   const [search, setSearch] = useState("");
@@ -37,7 +38,7 @@ const UserPage = ({ data }) => {
           />
         </div>
 
-        {/* Empty search result */}
+        
         {filteredUsers.length === 0 && (
           <div className="mt-8 rounded-2xl border border-dashed border-slate-300 bg-white px-6 py-16 text-center">
             <p className="text-base font-medium text-slate-900">
@@ -49,7 +50,7 @@ const UserPage = ({ data }) => {
           </div>
         )}
 
-        {/* User cards */}
+        
         {filteredUsers.length > 0 && (
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {filteredUsers.map((user) => (
@@ -64,7 +65,7 @@ const UserPage = ({ data }) => {
                     className="h-14 w-14 rounded-full bg-slate-100 object-cover"
                   />
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold text-slate-900">
+                    <p className={`truncate text-sm font-semibold text-slate-900 ${style.text}`}>
                       {user.firstName} {user.lastName}
                     </p>
                     <p className="truncate text-sm text-slate-500">
