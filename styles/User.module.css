@@ -1,3 +1,19 @@
 .text {
     color: yellowgreen;
 }
+
+.btn {
+  color: rgb(136, 214, 18);
+  background: #126a87;
+  border: 2px solid chartreuse;
+  border-radius: 0.5rem;
+  font-size: larger;
+  padding: 5;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  border-color: lime;
+  background-color: darkgreen;
+}
